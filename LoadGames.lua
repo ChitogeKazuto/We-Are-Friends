@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChitogeKazuto/We-Are-Friends/FreeScript/Game/Universal.lua",true))()
