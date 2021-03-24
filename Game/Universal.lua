@@ -3,9 +3,8 @@ local Window = DiscordLib:Window("We Are Friends - Demo")
 
 local Universal = Window:Server("Universal", "http://www.roblox.com/asset/?id=4384400106")
 local LocalPlayers = Universal:Channel("LocalPlayer")
-
-LocalPlayers:Label("vV WalkSpeeds Vv")
-local WS = LocalPlayers:Slider("Values", 0, 300, 16, function(Value)
+LocalPlayers:Seperator()
+local WS = LocalPlayers:Slider("WalkSpeeds", 0, 300, 16, function(Value)
     _G.WS = Value
 end)
 LocalPlayers:Toggle("Toggles WalkSpeeds",false, function(Value)
@@ -22,9 +21,8 @@ LocalPlayers:Button("Change to Normal", function()
     WS:Change(16)
     DiscordLib:Notification("Notification", "WalkSpeed = 16", "Okay!")
 end)    
-
-LocalPlayers:Label("vV JumpPowers Vv")
-local JP = LocalPlayers:Slider("Values", 0, 300, 50, function(Value)
+LocalPlayers:Seperator()
+local JP = LocalPlayers:Slider("JumpPowers", 0, 300, 50, function(Value)
     _G.JP = Value
 end)
 LocalPlayers:Toggle("Toggles JumpPowers",false, function(Value)
@@ -43,7 +41,7 @@ LocalPlayers:Button("Change to Normal", function()
 end)
 
 local PublicScript = Universal:Channel("Public Script")
-PublicScript:Label("vV Universal Scripts Vv")
+PublicScript:Seperator()
 local InfJump
 PublicScript:Toggle("Infinite Jump",false, function(Value)
     if Value == true then
@@ -64,14 +62,14 @@ if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) t
         Plr.Character:MoveTo(Mouse.Hit.p)
     end)
 end)
-PublicScript:Label("vV Admin Scripts Vv")
+PublicScript:Seperator()
 PublicScript:Button("Infinite Yield", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
 
 local Settings = Window:Server("Settings", "http://www.roblox.com/asset/?id=4483345737")
 local Setting = Settings:Channel("Settings")
-Setting:Label("vV Ui Settings Vv")
+Setting:Seperator()
 Setting:Toggle("Confirm Destroy Ui",false, function(Value)
     _G.ConfirmDS = Value
 end)
