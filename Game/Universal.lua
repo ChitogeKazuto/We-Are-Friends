@@ -69,12 +69,6 @@ PublicScript:Button("Infinite Yield", function()
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
 
-local ESP = Universal:Channel("ESP")
-ESP:Label("Cooming Soon!")
-
-local Aimbot = Universal:Channel("Aimbot")
-Aimbot:Label("Cooming Soon!")
-
 local Settings = Window:Server("Settings", "http://www.roblox.com/asset/?id=4483345737")
 local Setting = Settings:Channel("Settings")
 Setting:Label("vV Ui Settings Vv")
