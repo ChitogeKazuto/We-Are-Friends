@@ -38,7 +38,7 @@ LocalPlayers:Toggle("Toggles JumpPowers",false, function(Value)
     end
 end)
 LocalPlayers:Button("Change to Normal", function()
-    WS:Change(50)
+    JP:Change(50)
     DiscordLib:Notification("Notification", "JumpPowers = 50", "Okay!")
 end)
 
