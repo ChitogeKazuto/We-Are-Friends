@@ -77,6 +77,6 @@ Setting:Button("Destroy Ui", function()
     if _G.ConfirmDS == true then
         game:GetService("CoreGui").Discord:Destroy()
     else
-        DiscordLib:Notification("Notification", "Ture Confirm Destroy Ui On To Destroy Ui", "Okay!")
+        DiscordLib:Notification("Notification", "Confirm Destroy Ui [False]", "Okay!")
     end
 end)
